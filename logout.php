@@ -4,8 +4,19 @@ session_start();
 
 require "include/db.php";
 
-?>
+// faire l'appel des variables super globales de session
+if(
+    isset($_SESSION["user"])
+){
 
+    // Suppression en session du tableau user (et deconnexion)
+    unset($_SESSION["user"]);
+
+    $success = "Vous avez bien été déconnecté !";
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -23,19 +34,20 @@ require "include/db.php";
 <?php
 include "include/menus.php";
 ?>
-
 <div class="container-fluid">
 
-<div class="row">
+    <div class="row">
 
-    <div class="col-12 col-md-8 mx-auto py-5">
-        <h1 class="pb-4">Accueil Wikifruit</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni repellendus hic soluta ab at ea delectus consectetur, quos suscipit, necessitatibus, impedit blanditiis! Modi fugiat accusantium repellendus impedit repellat molestias a, dolore ab praesentium recusandae quae debitis facere nesciunt eaque quasi alias iste. Explicabo ad deleniti esse aliquam est? Nam, et.</p>
+        <div class="col-12 col-md-8 offset-md-2 py-5">
+            <h1 class="pb-4">Vous devez être connecté</h1>
+            <p class="alert alert-warning">Veuillez <a href="login.php">cliquer ici</a> pour vous connecter d'abord !</p>
+        </div>
+
     </div>
 
 </div>
 
-</div>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 </body>

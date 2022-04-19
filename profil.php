@@ -1,11 +1,3 @@
-<?php
-
-session_start();
-
-require "include/db.php";
-
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -20,22 +12,7 @@ require "include/db.php";
 <body>
 
 <!-- Menu -->
-<?php
-include "include/menus.php";
-?>
-
-<div class="container-fluid">
-
-<div class="row">
-
-    <div class="col-12 col-md-8 mx-auto py-5">
-        <h1 class="pb-4">Accueil Wikifruit</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni repellendus hic soluta ab at ea delectus consectetur, quos suscipit, necessitatibus, impedit blanditiis! Modi fugiat accusantium repellendus impedit repellat molestias a, dolore ab praesentium recusandae quae debitis facere nesciunt eaque quasi alias iste. Explicabo ad deleniti esse aliquam est? Nam, et.</p>
-    </div>
-
-</div>
-
-</div>
+<?php include "include/menu.php"; ?>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 </body>

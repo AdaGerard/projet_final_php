@@ -53,11 +53,11 @@ if(
 
         require "include/db.php";
 
-        $insertNewUser = $db->prepare( "INSERT INTO users(email, password, pseudonym, register_date) VALUES(?, ?, ?, NOW())" );
+        $insertNewUser = $db->prepare( "INSERT INTO users(email, password, pseudonym, register_date) VALUES(?, ?, ?, NOW() )" );
 
         $querySuccess = $insertNewUser->execute([
             $_POST["email"],
-            $_POST["password"],
+            password_hash($_POST['password'], PASSWORD_BCRYPT),
             $_POST["pseudonym"],
         ]);
 
