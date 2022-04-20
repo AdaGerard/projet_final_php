@@ -12,8 +12,6 @@ if(
     // Suppression en session du tableau user (et deconnexion)
     unset($_SESSION["user"]);
 
-    $success = "Vous avez bien été déconnecté !";
-
 }
 
 ?>
@@ -32,7 +30,7 @@ if(
 
 <!-- Menu -->
 <?php
-include "include/menus.php";
+include "include/menu.php";
 ?>
 <div class="container-fluid">
 

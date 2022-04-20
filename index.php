@@ -2,8 +2,6 @@
 
 session_start();
 
-require "include/db.php";
-
 ?>
 
 <!DOCTYPE html>
